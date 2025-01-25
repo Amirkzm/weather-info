@@ -19,6 +19,10 @@ const WeatherMap = () => {
   // State for the selected layer
   const [selectedLayer, setSelectedLayer] = useState("clouds_new");
 
+  // Center and Zoom state
+  const [mapCenter] = useState<[number, number]>([44.4048, 8.9444]); // Initial coordinates
+  const [mapZoom] = useState<number>(10); // Initial zoom level
+
   // OpenWeatherMap Tile URL
   const getOpenWeatherTileLayer = (layer: string) =>
     `https://tile.openweathermap.org/map/${layer}/{z}/{x}/{y}.png?appid=${openWeatherApiKey}`;
@@ -57,8 +61,8 @@ const WeatherMap = () => {
       {/* Map Container */}
       <div className="map-container" style={{ height: "500px", width: "100%" }}>
         <MapContainer
-          center={[44.4048, 8.9444]} // Adjust the initial coordinates
-          zoom={10} // Set initial zoom level
+          center={mapCenter} // Set initial center
+          zoom={mapZoom} // Set initial zoom level
           style={{ height: "100%", width: "100%" }}
         >
           {/* OpenStreetMap Base Layer */}
