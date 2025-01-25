@@ -3,6 +3,7 @@ import globals from "globals";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import typescriptEslint from "@typescript-eslint/eslint-plugin";
 
 export default [
   { ignores: ["dist"] },
@@ -41,6 +42,31 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
+    },
+  },
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        ecmaFeatures: { jsx: true },
+        sourceType: "module",
+      },
+    },
+    plugins: {
+      "@typescript-eslint": typescriptEslint,
+    },
+    rules: {
+      ...typescriptEslint.configs.recommended.rules,
+    },
+  },
+  {
+    files: ["components/WeatherMap.tsx"],
+    rules: {
+      "@typescript-eslint/ban-ts-comment": "off",
+      "react/jsx-no-comment-textnodes": "off",
     },
   },
 ];
