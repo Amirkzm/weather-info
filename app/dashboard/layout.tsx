@@ -1,7 +1,9 @@
-import { AppSidebar } from "@/components/Sidebar";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import DashboardSidebar from "@/components/DashboardSidebar";
 import React from "react";
 import "../globals.css";
+import { ThemeProvider } from "../providers/ThemeProvider";
+import DashboardNavbar from "@/components/DashboardNavbar";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export default function DashboardLayout({
   children,
@@ -11,14 +13,22 @@ export default function DashboardLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex">
-          <SidebarProvider>
-            <div className="flex-1">
-              <AppSidebar />
+        <ClerkProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <DashboardNavbar />
+            <div className="flex">
+              <div className="flex-1">
+                <DashboardSidebar />
+              </div>
+              <div className="flex-auto w-3/5  flex-center">{children}</div>
             </div>
-          </SidebarProvider>
-          <div className="flex-3">{children}</div>
-        </div>
+          </ThemeProvider>
+        </ClerkProvider>
       </body>
     </html>
   );

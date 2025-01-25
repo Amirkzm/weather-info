@@ -13,39 +13,36 @@ const WhyAquaLens = () => {
 
   // Images for each step in the gallery
   const galleryImages = [
-    "/data-collection.png",
-    "/integeration.png",
-    "/analysis.svg",
-    "/actionable-insight.svg",
-    "/decision.svg",
+    "/weather-overview.svg", // Overview of weather data
+    "/charts.png", // Generate statistics
+    "/maps.png", // Map visualization
+    "/netcdf.png", // NetCDF file analysis
   ];
 
   const steps = [
     {
       id: 1,
-      title: "Data Collection",
+      title: "Weather Overview",
       description:
-        "Access ocean and atmospheric data from satellites, sensors, and repositories.",
+        "Search for any city and get a detailed overview of weather data including temperature, humidity, pressure, and forecasts.",
     },
     {
       id: 2,
-      title: "Seamless Integration",
-      description: "Aggregate multiple data formats into a unified system.",
+      title: "Custom Statistics",
+      description:
+        "Select date ranges and generate statistics like mean temperature, precipitation, and sunshine duration with charts.",
     },
     {
       id: 3,
-      title: "Powerful Analysis",
-      description: "Analyze trends and visualize complex climate data.",
+      title: "Interactive Map",
+      description:
+        "Visualize weather data with map layers such as temperature, pressure, and clouds.",
     },
     {
       id: 4,
-      title: "Actionable Insights",
-      description: "Leverage insights to inform sustainable practices.",
-    },
-    {
-      id: 5,
-      title: "Impactful Decisions",
-      description: "Empower stakeholders to create lasting change.",
+      title: "NetCDF File Analysis",
+      description:
+        "Upload your NetCDF files to visualize and analyze custom weather data in interactive charts.",
     },
   ];
 
@@ -104,7 +101,7 @@ const WhyAquaLens = () => {
         setApi={(api) => api?.scrollTo(activeStep - 2)}
       >
         <CarouselContent className="flex space-x-4 !w-[800px] ">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {Array.from({ length: 4 }).map((_, index) => (
             <CarouselItem key={index} className="basis-1/2">
               <div className="p-1">
                 <Image
