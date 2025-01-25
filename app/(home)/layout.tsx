@@ -4,6 +4,7 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import "leaflet/dist/leaflet.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",

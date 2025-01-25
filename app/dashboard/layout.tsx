@@ -4,6 +4,7 @@ import "../globals.css";
 import { ThemeProvider } from "../providers/ThemeProvider";
 import DashboardNavbar from "@/components/DashboardNavbar";
 import { ClerkProvider } from "@clerk/nextjs";
+import "leaflet/dist/leaflet.css";
 
 export default function DashboardLayout({
   children,
