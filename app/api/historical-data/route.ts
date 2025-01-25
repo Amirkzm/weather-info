@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getGeoCoordData } from "@/lib/getGeoCoordData";
 import { NextRequest, NextResponse } from "next/server";
 import { fetchWeatherApi } from "openmeteo";

@@ -1,7 +1,10 @@
 // GeospatialMaps.tsx
 "use client";
 
-import Map from "@/components/WeatherMap";
+import dynamic from "next/dynamic";
+
+// Dynamically import the Map component with SSR disabled
+const Map = dynamic(() => import("@/components/WeatherMap"), { ssr: false });
 
 export default function Page() {
   return (

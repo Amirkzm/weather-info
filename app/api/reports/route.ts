@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { getGeoCoordData } from "@/lib/getGeoCoordData";
 import { getHistoricalData } from "@/lib/getHistoricalData";
 import { NextRequest, NextResponse } from "next/server";
