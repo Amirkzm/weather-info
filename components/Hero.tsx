@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
+import HeroActions from "./HeroActions";
 
 const Hero = () => {
   return (
@@ -13,8 +14,7 @@ const Hero = () => {
           tools for analysis, mapping, and custom insights.
         </p>
         <div className="flex gap-4">
-          <Button>Get Started</Button>
-          <Button variant={"secondary"}>Explore Features</Button>
+          <HeroActions />
         </div>
       </div>
     </div>

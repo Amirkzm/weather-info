@@ -47,7 +47,7 @@ const WhyAquaLens = () => {
   ];
 
   return (
-    <section className="relative bg-gray-100 py-16">
+    <section className="relative bg-gray-100 py-16" id="why-aqualens">
       {/* Gallery Background */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center opacity-20 transition-opacity duration-500"
