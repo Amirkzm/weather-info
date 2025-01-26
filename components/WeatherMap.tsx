@@ -60,7 +60,6 @@ const WeatherMap = () => {
 
       {/* Map Container */}
       <div className="map-container" style={{ height: "500px", width: "100%" }}>
-        // @ts-ignore
         <MapContainer
           center={mapCenter} // Set initial center
           zoom={mapZoom} // Set initial zoom level
