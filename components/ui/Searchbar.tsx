@@ -28,19 +28,19 @@ export function Searchbar() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="sm:w-fit md:w-[20%] flex-center justify-between">
+        <Button className="sm:w-fit md:w-[50%] flex-center justify-between">
           Search here ...
           <SearchIcon className="w-5 h-5 ml-2" />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
+        <Command onClick={handleSearch}>Search</Command>
         <Input
           placeholder="Search for your desired location"
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
         />
-        <Command onClick={handleSearch}>Search</Command>
       </DialogContent>
     </Dialog>
   );

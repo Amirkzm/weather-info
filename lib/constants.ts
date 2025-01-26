@@ -5,7 +5,7 @@ export const DashboardNavLinks = [
     icon: "🏠",
   },
   {
-    title: "Time-Series Data",
+    title: "Charts",
     url: "/dashboard/time-series-data",
     icon: "📈",
   },

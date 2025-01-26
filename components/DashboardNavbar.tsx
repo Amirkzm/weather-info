@@ -7,13 +7,23 @@ import { Button } from "./ui/button";
 
 const DashboardNavbar = () => {
   return (
-    <div className="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-4 bg-slate-400">
-      <div className="flex-center gap-2">
-        <Image src={"/logo.png"} width={40} height={40} alt="AquaLens Logo" />
-        <h1 className="text-2xl font-bold text-white">AquaLens</h1>
+    <nav className="flex items-center justify-between px-4 py-2 bg-gray-800 text-white shadow-md">
+      <div className="flex items-center space-x-3">
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={40}
+          height={40}
+          className="rounded-full"
+        />
+        <span className="text-xl font-semibold">Sky Metrics</span>
       </div>
-      <Searchbar />
-      <div className="flex-center gap-4">
+
+      <div className="flex-1 px-4 flex-center">
+        <Searchbar />
+      </div>
+
+      <div className="flex items-center space-x-4">
         <ModeToggle />
         <>
           <SignedOut>
@@ -26,7 +36,7 @@ const DashboardNavbar = () => {
           </SignedIn>
         </>
       </div>
-    </div>
+    </nav>
   );
 };
 
