@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-6 lg:mb-0">
-              <Image src="/logo.svg" alt="Logo" width={200} height={100} />
+              <Image src="/logo.png" alt="Logo" width={200} height={100} />
             </div>
             <p className="mt-4 text-sm">
               Your trusted partner in oceanic and atmospheric insights. Explore

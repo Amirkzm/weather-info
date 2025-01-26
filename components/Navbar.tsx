@@ -10,7 +10,7 @@ const Navbar = () => {
         <ul className="flex justify-between space-x-4 p-4">
           <li>
             <Link href="/">
-              <Image src="/logo.svg" alt="logo" width={72} height={72} />
+              <Image src="/logo.png" alt="logo" width={72} height={72} />
             </Link>
           </li>
           <li className="flex items-center space-x-4">
